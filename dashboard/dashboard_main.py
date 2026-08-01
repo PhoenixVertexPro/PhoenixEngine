@@ -1,6 +1,6 @@
 from flask import Flask, render_template, jsonify
 from engine.core import engine_status
-from services.signals import generate_signal
+from engine.signals import generate_signal
 
 app = Flask(__name__)
 
