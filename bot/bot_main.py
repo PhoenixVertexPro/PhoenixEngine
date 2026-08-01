@@ -1,5 +1,5 @@
 from telegram.ext import ApplicationBuilder, CommandHandler
-import os
+from bot.handlers.start_handler import start
 from services.vip import check_vip
 from services.signals import generate_signal
 
