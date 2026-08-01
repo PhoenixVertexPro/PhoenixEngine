@@ -1,7 +1,2 @@
-python-telegram-bot
-fastapi
-uvicorn
-sqlalchemy
-pydantic
-requests
+python-telegram-bot==20.7
 Flask==3.0.0
