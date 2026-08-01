@@ -18,3 +18,5 @@ def signal():
 
 def start_dashboard():
     app.run(host="0.0.0.0", port=8000)
+from api.api_main import api
+app.register_blueprint(api, url_prefix="/api")
