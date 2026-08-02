@@ -1,5 +1,11 @@
-async def start(update, context):
-    """
-    هندلر دستور /start
-    """
-    await update.message.reply_text("PhoenixEngine فعال شد 🔥")
+from telegram import Update
+from telegram.ext import ContextTypes
+
+async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text(
+        "🔥 خوش آمدید به PhoenixEngine\n\n"
+        "دستورات:\n"
+        "/signal — دریافت سیگنال عمومی\n"
+        "/vip — بررسی وضعیت VIP\n\n"
+        "به‌زودی امکانات بیشتری فعال می‌شود…"
+    )
