@@ -1,0 +1,9 @@
+<h2>فرصت‌های رفرال</h2>
+
+<ul>
+{% for r in referrals %}
+    <li>
+        {{ r.exchange }} — سود: {{ r.profit }}
+    </li>
+{% endfor %}
+</ul>
