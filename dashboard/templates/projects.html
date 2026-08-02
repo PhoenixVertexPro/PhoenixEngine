@@ -1,0 +1,9 @@
+<h2>پروژه‌های پیشنهادی</h2>
+
+<ul>
+{% for p in projects %}
+    <li>
+        {{ p.name }} — {{ p.type }} — ریسک: {{ p.risk }}
+    </li>
+{% endfor %}
+</ul>
