@@ -1,13 +1,18 @@
 body {
-    background: #111;
+    background: #0d0d0d;
     color: #fff;
-    font-family: Arial;
-    text-align: center;
-    padding: 40px;
+    font-family: sans-serif;
 }
 
-pre {
-    background: #222;
-    padding: 20px;
-    border-radius: 10px;
+h1, h2 {
+    color: #ffcc00;
+}
+
+a {
+    color: #00aaff;
+    font-size: 18px;
+}
+
+ul {
+    list-style: none;
 }
