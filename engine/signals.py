@@ -1,12 +1,14 @@
-def generate_signal():
+# engine/signals.py
+
+def generate_auto_signal():
     """
-    تولید یک سیگنال نمونه برای PhoenixEngine.
-    بعداً می‌توانیم این بخش را به موتور تحلیل واقعی وصل کنیم.
+    موتور تولید سیگنال خودکار
+    در آینده می‌تواند به APIهای واقعی وصل شود
     """
     return {
-        "pair": "BTC/USDT",
+        "pair": "ETH/USDT",
         "action": "BUY",
-        "entry": 64200,
-        "target": 65000,
-        "stop": 63500
+        "entry": 3120,
+        "target": 3200,
+        "stop": 3050,
     }
