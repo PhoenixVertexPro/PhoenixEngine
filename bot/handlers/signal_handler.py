@@ -1,11 +1,14 @@
+import requests
 from telegram import Update
 from telegram.ext import ContextTypes
-from services.signals import generate_signal
+
+API_URL = "https://YOUR-RAILWAY-API-URL/api/signal"
 
 async def signal(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    sig = generate_signal()
+    try:
+        sig = requests.get(API_URL).json()
 
-    text = f"""
+        text = f"""
 📡 PhoenixEngine Signal
 
 🔹 Pair: {sig['pair']}
@@ -16,4 +19,8 @@ async def signal(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 ⚠️ مدیریت سرمایه فراموش نشود.
 """
-    await update.message.reply_text(text)
+        await update.message.reply_text(text)
+
+    except Exception as e:
+        await update.message.reply_text("❌ خطا در دریافت سیگنال از API")
+        print("Signal API Error:", e)
