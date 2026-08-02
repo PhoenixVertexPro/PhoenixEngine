@@ -1,32 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Phoenix Dashboard</title>
+    <title>PhoenixEngine Dashboard</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <h1>PhoenixEngine Dashboard 🔥</h1>
+    <h1>PhoenixEngine Dashboard</h1>
 
-    <h2>وضعیت Engine</h2>
-    <div id="status"></div>
-
-    <h2>آخرین سیگنال</h2>
-    <div id="signal"></div>
-
-    <script>
-        fetch("/status")
-            .then(res => res.json())
-            .then(data => {
-                document.getElementById("status").innerHTML =
-                    `<pre>${JSON.stringify(data, null, 2)}</pre>`;
-            });
-
-        fetch("/signal")
-            .then(res => res.json())
-            .then(data => {
-                document.getElementById("signal").innerHTML =
-                    `<pre>${JSON.stringify(data, null, 2)}</pre>`;
-            });
-    </script>
+    <ul>
+        <li><a href="/vip">مدیریت VIP</a></li>
+        <li><a href="/signals">سیگنال‌ها</a></li>
+        <li><a href="/projects">پروژه‌ها</a></li>
+        <li><a href="/referral">رفرال‌ها</a></li>
+        <li><a href="/system">وضعیت سیستم</a></li>
+    </ul>
 </body>
 </html>
