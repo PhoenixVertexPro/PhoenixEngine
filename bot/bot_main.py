@@ -41,7 +41,7 @@ async def signal(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 def start_bot():
-    token = os.getenv("TELEGRAM_TOKEN")
+    token = 8818666677:AAFnYB5D8orphTWdyrwxjjXL-TNLhq5ho6A
     if not token:
         raise RuntimeError("TELEGRAM_TOKEN در محیط تنظیم نشده است.")
 
